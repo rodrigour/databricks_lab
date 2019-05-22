@@ -38,6 +38,14 @@
 			{
 				"name": "Notebook",
 				"type": "DatabricksNotebook",
+				"dependsOn": [
+					{
+						"activity": "S3 to Azure Blob",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "7.00:00:00",
 					"retry": 0,
@@ -75,11 +83,11 @@
 		"parameters": {
 			"inputPath": {
 				"type": "string",
-				"defaultValue": "/dwtemp"
+				"defaultValue": "/"
 			},
 			"outputpath": {
 				"type": "string",
-				"defaultValue": "/dwtemp2"
+				"defaultValue": "/"
 			},
 			"fileName": {
 				"type": "string",
