@@ -8,23 +8,35 @@
 		"type": "AmazonS3Object",
 		"structure": [
 			{
-				"name": "AIRPORT_ID",
+				"name": "product_id",
 				"type": "String"
 			},
 			{
-				"name": "AIRPORT",
+				"name": "category",
 				"type": "String"
 			},
 			{
-				"name": "DISPLAY_AIRPORT_NAME",
+				"name": "brand",
 				"type": "String"
 			},
 			{
-				"name": "LATITUDE",
+				"name": "model",
 				"type": "String"
 			},
 			{
-				"name": "LONGITUDE",
+				"name": "price",
+				"type": "String"
+			},
+			{
+				"name": "processor",
+				"type": "String"
+			},
+			{
+				"name": "size",
+				"type": "String"
+			},
+			{
+				"name": "display",
 				"type": "String"
 			}
 		],
@@ -37,6 +49,7 @@
 				"skipLineCount": 0,
 				"firstRowAsHeader": true
 			},
+			"key": "Product.csv",
 			"bucketName": "demoact"
 		}
 	}
